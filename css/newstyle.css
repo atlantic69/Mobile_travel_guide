@@ -1,0 +1,21 @@
+.block {
+	width: 100%;
+	margin: 0% auto;
+	height: 761px;
+	background: url(/img/bg1.png) #ccc;
+}
+
+.container a {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.container a:hover {
+	transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	color: #00ADE4;
+}
