@@ -18,69 +18,61 @@
 	<?php require "blocks/header.php" ?>
 		
 	<div class = "block">
-		<div class="container">
-			<div class="container">
-				<div class="container rounded p-5 bg-primary" style="--bs-bg-opacity: .75;">
+		<div class="container px-5 p-4">
+			<div class="container px-5">
+				<div class="container p-4 rounded bg-primary shadow" style="--bs-bg-opacity: .55;">
 					
-					<h2 class="text-center">Добавить достопримечательность:</h2>
+					<h3 class="text-center mb-4">Предложить достопримечательность для добавления на карту</h3>
 					
 					<form class="needs-validation" novalidate="">
-						<div class="row g-1">
-            
-							<div class="col-12">
-								<label for="address" class="form-label">Адрес</label>
-								<input type="text" class="form-control" id="address" placeholder="ул. Тольятти, 42" required="">
-								<div class="invalid-feedback">
-									Пожалуйста, введите адрес объекта.
-								</div>
+						<div class="row g-2">
+
+							<div class="col-10 mx-auto">
+								<h6 for="title" class="form-label">Название объекта:</h6>
+								<input type="text" class="form-control" id="title" placeholder="Памятник лавочке" value="" required="">
 							</div>
 
-							<div class="col-12">
-								<label for="address2" class="form-label">Координаты <span class="">(Необязательно)</span></label>
-								<input type="text" class="form-control" id="address2" placeholder="">
+							<div class="col-10 mx-auto">
+								<h6 for="address" class="form-label">Адрес:</h6>
+								<input type="text" class="form-control" id="address" placeholder="Тольятти, 42a" required="">
 							</div>
 
-							<div class="col-sm-6">
-								<label for="country" class="form-label">Страна</label>
+							<div class="col-10 mx-auto">
+								<h6 for="coord" class="form-label">Координаты:</h6>
+								<input type="text" class="form-control" id="coord" placeholder="12.345678, 98,765432">
+							</div>
+
+							<div class="col-sm-4 mx-auto">
+								<h6 for="country" class="form-label">Страна:</h6>
 								<select class="form-select" id="country" required="">
 									<option value="">Выберите страну...</option>
 									<option>Россия</option>
+									<option>Казахстан</option>
+									<option>Китай</option>
+									<option>США</option>
 								</select>
-								<div class="invalid-feedback">
-									Пожалуйста, выберите действующую страну.
-								</div>
 							</div>
 
-							<div class="col-sm-6">
-								<label for="state" class="form-label">Город</label>
+							<div class="col-sm-4 mx-auto">
+								<h6 for="state" class="form-label">Город:</h6>
 								<select class="form-select" id="state" required="">
 									<option value="">Выберите город...</option>
 									<option>Новокузнецк</option>
+									<option>Москва</option>
+									<option>Владивосток</option>
+									<option>Калининград</option>
 								</select>
-								<div class="invalid-feedback">
-									Пожалуйста, выберите действующий город.
-								</div>
 							</div>
 			
-							<div class="col-12">
-								<label for="firstName" class="form-label">Название объекта</label>
-								<input type="text" class="form-control" id="firstName" placeholder="Памятник лавочке, на которой я сидел (:" value="" required="">
-								<div class="invalid-feedback">
-									Действительное название обязательно.
+							<div class="col-10 mx-auto">
+								<h6 for="description" class="form-label">Расскажите об этом месте:</h6>
+								<div class="input-group">
+  									<textarea class="form-control" id="description" placeholder="Достопримечательность появилась..."></textarea>
 								</div>
 							</div>
 
-							<div class="col-12">
-								<label for="lastName" class="form-label">Расскажите об этом месте</label>
-								<input type="text" class="form-control" id="lastName" rows="5" placeholder="Достопримечательность появилась..." value="" required="">
-								<div class="invalid-feedback">
-									Описание обязательно.
-								</div>
-							</div>
-
-							<h5 class="my-3">Как вы оцените это место?</h5>
-          
-							<div class="my-0 mb-3 col-sm-6">
+							<div class="col-sm-4 mx-auto">
+								<h6 class="form-label">Как вы оцените это место?</h6>
 								<div class="form-check">
 									<input id="1" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
 									<label class="form-check-label" for="1">Отлично</label>
@@ -103,23 +95,22 @@
 								</div>
 							</div>
 		  
-							<div class="mb-3 col-sm-6">
-								<label for="formFileSm" class="form-label"><h5 class="mb-2">Есть фотографии? Загрузите!</h5></label>
-								<input class="form-control form-control-sm" id="formFileSm" type="file">
+							<div class="col-sm-4 my-5 mx-auto">
+								<h6 for="photo" class="form-label">Есть фотографии? Загрузите!</h6>
+								<input class="form-control form-control-sm" id="photo" type="file">
 							</div>
 							
-							
-							<button class="my-3 w-100 btn btn-dark" type="submit">Предложить достопримечательность</button>
+							<div class="col-10 mx-auto">
+								<button class="btn btn-lg btn-dark w-100" type="submit">Предложить объект</button>
+							</div>
+
 						</div>
 					</form>
-				
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	
-		
 	<?php require "blocks/footer.php" ?>
 		
 	</body>
