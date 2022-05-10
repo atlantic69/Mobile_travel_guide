@@ -1,3 +1,4 @@
+<!--Заполнить value значениями с БД-->
 <!doctype html>
 <html lang="ru">
 	<head>
@@ -25,35 +26,35 @@
    			  	<h3 class="modal-title mx-auto">Предложенные достопримечательности</h3>
    			</div>
    			<div class="modal-body py-2">
-   			  	<form class="needs-validation" novalidate="">
+   			  	<form class="needs-validation" novalidate>
 						<div class="row g-2">
 							<div class="col-10 mx-auto">
 								<h6 for="title_obj" class="form-label">Название объекта:</h6>
-								<input type="text" class="form-control" id="title_obj">
+								<input type="text" class="form-control" id="title_obj" value="">
 							</div>
 							<div class="col-sm-4 mx-auto">
 								<h6 for="country" class="form-label">Страна:</h6>
-								<input type="text" class="form-control" id="country">
+								<input type="text" class="form-control" id="country" value="">
 							</div>
 							<div class="col-sm-4 mx-auto">
 								<h6 for="state" class="form-label">Город:</h6>
-								<input type="text" class="form-control" id="state">
+								<input type="text" class="form-control" id="state" value="">
 							</div>
 							<div class="col-10 mx-auto">
 								<h6 for="address" class="form-label">Адрес:</h6>
-								<input type="text" class="form-control" id="address">
+								<input type="text" class="form-control" id="address" value="">
 							</div>
 							<div class="col-sm-4 mx-auto">
 								<h6 for="address_X" class="form-label">Координата X:</h6>
-								<input type="text" class="form-control" id="address_X">
+								<input type="text" class="form-control" id="address_X" value="">
 							</div>
 							<div class="col-sm-4 mx-auto">
 								<h6 for="address_Y" class="form-label">Координата Y:</h6>
-								<input type="text" class="form-control" id="address_Y">
+								<input type="text" class="form-control" id="address_Y" value="">
 							</div>
 							<div class="col-10 mx-auto">
 								<h6 for="description" class="form-label">Описание объекта:</h6>
-								<input type="text" class="form-control" id="description" rows="2">
+								<input type="text" class="form-control" id="description" value="">
 							</div>
 							<div class="col-sm-4 mx-auto">
 								<h6 for="rating" class="form-label">Рейтинг места:</h6>
@@ -71,9 +72,9 @@
    			</div>
    			<div class="modal-footer border-top-0">
    				<div class="col-10 mx-auto">
-						<button type="button" class="btn btn-lg btn-success w-100 mx-0 mb-2">Добавить объект</button>
-						<button type="button" class="btn btn-lg btn-outline-warning w-100 mx-0 mb-2">Редактировать</button>
-						<button type="button" class="btn btn-lg btn-outline-danger w-100 mx-0 mb-1">Удалить</button>
+						<button type="button" id="but_1" onclick="" class="btn btn-lg btn-success w-100 mx-0 mb-2">Добавить объект</button>
+						<button type="button" id="but_2" onclick="" class="btn btn-lg btn-outline-warning w-100 mx-0 mb-2">Редактировать</button>
+						<button type="button" id="but_3" onclick="" class="btn btn-lg btn-outline-danger w-100 mx-0 mb-1">Удалить</button>
 					</div>
    			</div>
 

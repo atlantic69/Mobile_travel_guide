@@ -1,3 +1,4 @@
+<!--Вынести теги с head`а в отдельный файл-->
 <!doctype html>
 <html lang="ru">
 	<head>

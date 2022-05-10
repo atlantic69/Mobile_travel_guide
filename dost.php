@@ -1,3 +1,4 @@
+<!--Вынести скрипт и теги с head`а в отдельные файлы-->
 <!doctype html>
 <html lang="ru">
 	<head>
@@ -24,79 +25,85 @@
 					
 					<h3 class="text-center mb-4">Предложить достопримечательность для добавления на карту</h3>
 					
-					<form class="needs-validation" novalidate="">
+					<form class="needs-validation" novalidate>
 						<div class="row g-2">
 
-							<div class="col-10 mx-auto">
+							<div class="col-10 mx-auto position-relative">
 								<h6 for="title" class="form-label">Название объекта:</h6>
-								<input type="text" class="form-control" id="title" placeholder="Памятник лавочке" value="" required="">
+								<input type="text" class="form-control" id="title" placeholder="Памятник лавочке" required>
+								<div class="invalid-tooltip">Пожалуйста, напишите название объекта.</div>
 							</div>
 
-							<div class="col-10 mx-auto">
+							<div class="col-10 mx-auto position-relative">
 								<h6 for="address" class="form-label">Адрес:</h6>
-								<input type="text" class="form-control" id="address" placeholder="Тольятти, 42a" required="">
+								<input type="text" class="form-control" id="address" placeholder="Тольятти, 42a" required>
+								<div class="invalid-tooltip">Пожалуйста, укажите адрес объекта.</div>
 							</div>
 
 							<div class="col-10 mx-auto">
-								<h6 for="coord" class="form-label">Координаты:</h6>
-								<input type="text" class="form-control" id="coord" placeholder="12.345678, 98,765432">
+								<h6 for="coord" class="form-label">Координаты:<small class="text-muted">(Необязательное поле)</small></h6>
+								<input type="text" class="form-control" id="coord" placeholder="Введите в формате: 12.345678, 98.765432">
 							</div>
 
-							<div class="col-sm-4 mx-auto">
+							<div class="col-sm-4 mx-auto position-relative">
 								<h6 for="country" class="form-label">Страна:</h6>
-								<select class="form-select" id="country" required="">
+								<select class="form-select" id="country" required>
 									<option value="">Выберите страну...</option>
-									<option>Россия</option>
-									<option>Казахстан</option>
-									<option>Китай</option>
-									<option>США</option>
+										<option>Россия</option>
+										<option>Казахстан</option>
+										<option>Китай</option>
+										<option>США</option>
 								</select>
+								<div class="invalid-tooltip">Пожалуйста, выберите страну.</div>
 							</div>
 
-							<div class="col-sm-4 mx-auto">
+							<div class="col-sm-4 mx-auto position-relative">
 								<h6 for="state" class="form-label">Город:</h6>
-								<select class="form-select" id="state" required="">
+								<select class="form-select" id="state" required>
 									<option value="">Выберите город...</option>
-									<option>Новокузнецк</option>
-									<option>Москва</option>
-									<option>Владивосток</option>
-									<option>Калининград</option>
+										<option>Новокузнецк</option>
+										<option>Москва</option>
+										<option>Владивосток</option>
+										<option>Калининград</option>
 								</select>
+								<div class="invalid-tooltip">Пожалуйста, выберите город.</div>
 							</div>
 			
 							<div class="col-10 mx-auto">
 								<h6 for="description" class="form-label">Расскажите об этом месте:</h6>
 								<div class="input-group">
-  									<textarea class="form-control" id="description" placeholder="Достопримечательность появилась..."></textarea>
+  									<textarea class="form-control position-relative" id="description" placeholder="Достопримечательность появилась..." required></textarea>
+  									<div class="invalid-tooltip">Пожалуйста, напишите пару слов об объекте.</div>
 								</div>
 							</div>
 
 							<div class="col-sm-4 mx-auto">
 								<h6 class="form-label">Как вы оцените это место?</h6>
 								<div class="form-check">
-									<input id="1" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
-									<label class="form-check-label" for="1">Отлично</label>
+									<input id="5" name="paymentMethod" type="radio" class="form-check-input" required>
+									<label class="form-check-label" for="5">Отлично</label>
 								</div>
 								<div class="form-check">
-									<input id="2" name="paymentMethod" type="radio" class="form-check-input" required="">
-									<label class="form-check-label" for="2">Хорошо</label>
+									<input id="4" name="paymentMethod" type="radio" class="form-check-input" required>
+									<label class="form-check-label" for="4">Хорошо</label>
 								</div>
 								<div class="form-check">
-									<input id="3" name="paymentMethod" type="radio" class="form-check-input" required="">
+									<input id="3" name="paymentMethod" type="radio" class="form-check-input" checked required>
 									<label class="form-check-label" for="3">Нормально</label>
 								</div>
 								<div class="form-check">
-									<input id="4" name="paymentMethod" type="radio" class="form-check-input" required="">
-									<label class="form-check-label" for="4">Плохо</label>
+									<input id="2" name="paymentMethod" type="radio" class="form-check-input" required>
+									<label class="form-check-label" for="2">Плохо</label>
 								</div>
-								<div class="form-check">
-									<input id="5" name="paymentMethod" type="radio" class="form-check-input" required="">
-									<label class="form-check-label" for="5">Ужасно</label>
+								<div class="form-check position-relative">
+									<input id="1" name="paymentMethod" type="radio" class="form-check-input" required=>
+									<label class="form-check-label" for="1">Ужасно</label>
+								<div class="invalid-tooltip">Нам важно знать вашу оценку.</div>
 								</div>
 							</div>
 		  
 							<div class="col-sm-4 my-5 mx-auto">
-								<h6 for="photo" class="form-label">Есть фотографии? Загрузите!</h6>
+								<h6 for="photo" class="form-label">Есть фотографии? Загрузите!<small class="text-muted">(Необязательное поле)</small></h6>
 								<input class="form-control form-control-sm" id="photo" type="file">
 							</div>
 							
@@ -112,6 +119,23 @@
 	</div>
 	
 	<?php require "blocks/footer.php" ?>
-		
+
 	</body>
 </html>
+
+<script type="text/javascript">
+	(function () {
+		'use strict'
+		var forms = document.querySelectorAll('.needs-validation')
+		Array.prototype.slice.call(forms)
+ 	 	.forEach(function (form) {
+ 	   	form.addEventListener('submit', function (event) {
+ 	   	  	if (!form.checkValidity()) {
+ 	       		event.preventDefault()
+ 	       		event.stopPropagation()
+ 	     		}
+ 	     	form.classList.add('was-validated')
+ 	  		}, false)
+ 		})
+	})()
+</script>

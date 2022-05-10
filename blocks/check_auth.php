@@ -1,3 +1,4 @@
+<!--Разобраться с переадресацией на главную страницу после срабатывания алерта-->
 <?php
 	$email = filter_var(trim($_POST['email']), FILTER_SANITIZE_STRING);
 	$password = filter_var(trim($_POST['password']), FILTER_SANITIZE_STRING);
@@ -13,7 +14,7 @@
 	
 	if(count($user) == 0)
 	{
-		echo "Такой пользователь не найден";
+		echo"<script>alert('Такой пользователь не найден')</script>";
 		exit();
 	}
 	

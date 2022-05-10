@@ -1,3 +1,4 @@
+<!--Создать страницу для настроек и избранного-->
 <header class="p-3 bg-dark text-white">
 	<div class="container">
 		<div class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -54,6 +55,7 @@
 						?>
 						<li><a class="dropdown-item" href="add_dost.php">Добавление+</a></li>
 						<?php endif; ?>
+						<li><a class="dropdown-item" href="#">Настройки</a></li>
 						<li><hr class="dropdown-divider"></li>
 						<li><a class="dropdown-item bg-danger text-white" href="blocks/exit.php">Выход</a></li>
 					</ul>

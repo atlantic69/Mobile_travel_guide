@@ -1,3 +1,4 @@
+<!--Разобраться с переадресацией на главную страницу после срабатывания алерта-->
 <?php
 	$name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
 	$email = filter_var(trim($_POST['email']), FILTER_SANITIZE_STRING);
@@ -5,19 +6,19 @@
 	
 	if(mb_strlen($name) < 2 || mb_strlen($name) > 49) 
 	{ 
-		echo "Недопустимая длина имени";
+		echo"<script>alert('Недопустимая длина имени, укажите более двух символов')</script>";
 		exit();
 	} 
 	
 	else if(mb_strlen($email) < 6 || mb_strlen($email) > 49) 
 	{ 
-		echo "Недопустимая длина Email";
+		echo"<script>alert('Недопустимая длина Email, укажите более шести символов')</script>";
 		exit();
 	}
 	
 	else if(mb_strlen($password) < 6 || mb_strlen($password) > 16)
 	{ 
-		echo "Пароль должен содержать от 6 до 16 символов";
+		echo"<script>alert('Пароль должен содержать от 6 до 16 символов')</script>";
 		exit();
 	}
 	

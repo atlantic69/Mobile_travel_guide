@@ -1,3 +1,4 @@
+<!--Вынести скрипт в отдельный файл-->
 <div class="modal fade" id="myModalReg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -8,21 +9,24 @@
 			</div>
 						
 			<div class="modal-body p-5 pt-0">
-				<form action="blocks/check_reg.php" class="" method="post">
+				<form action="blocks/check_reg.php" class="needs-validation" method="post" novalidate>
 					
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control rounded-4" id="name" name="name" placeholder="Name">
-						<label for="name">Укажите ваше имя</label>
+						<input type="text" class="form-control rounded-4" id="name" name="name" placeholder=" " required>
+						<label for="name">Введите никнейм</label>
+						<div class="invalid-feedback">Пожалуйста, введите никнейм.</div>
 					</div>
 								
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control rounded-4" id="email" name="email" placeholder="name@example.com">
-						<label for="email">Укажите Email</label>
+						<input type="email" class="form-control rounded-4" id="email" name="email" placeholder=" " required>
+						<label for="email">Укажите email</label>
+						<div class="invalid-feedback">Пожалуйста, укажите E-mail.</div>
 					</div>
 							
 					<div class="form-floating mb-3">
-						<input type="password" class="form-control rounded-4" id="password" name="password" placeholder="Password">
+						<input type="password" class="form-control rounded-4" id="password" name="password" placeholder=" " required>
 						<label for="password">Придумайте пароль</label>
+						<div class="invalid-feedback">Пожалуйста, придумайте другой пароль.</div>
 					</div>
 								
 					<button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Зарегистрироваться</button>
@@ -34,3 +38,20 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	(function () {
+  		'use strict'
+  		var forms = document.querySelectorAll('.needs-validation')
+  		Array.prototype.slice.call(forms)
+    	.forEach(function (form) {
+      	form.addEventListener('submit', function (event) {
+      	  	if (!form.checkValidity()) {
+          		event.preventDefault()
+          		event.stopPropagation()
+        		}
+        	form.classList.add('was-validated')
+      	}, false)
+    	})
+	})()
+</script>

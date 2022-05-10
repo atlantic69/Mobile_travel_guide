@@ -11,7 +11,7 @@
         "properties": {"balloonContentHeader": "<font size=3><b>Памятник Сосиска дружбы</b></font>",
         "balloonContentBody": "<img src='img_dost/sosiska.jpg' height='150' widht= '200'> <p/> <p>Памятник героям совесткого мультика Котёнок Гав. <br>Персонажи делят между собой сосиску.</br></p> <b>Адрес: Бардина, 36</b> <p><input type='submit' value='Маршрут'></p>",
         "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>Atlantic</strong>",
-        "hintContent": "<strong>Сосиска дружбы</strong>"}},
+        "hintContent": "<strong>Памятник Сосиска дружбы</strong>"}},
 
         {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [53.762427, 87.118803]},
         "properties": {"balloonContentHeader": "<font size=3><b>Уткин дом</b></font>",
