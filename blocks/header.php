@@ -26,6 +26,7 @@
 							<li><a class="dropdown-item" href="">Новокузнецк</a></li>
 							<li><a class="dropdown-item" href="">Москва</a></li>
 							<li><a class="dropdown-item" href="">Владивосток</a></li>
+							<li><a class="dropdown-item" href="">Калининград</a></li>
 						</ul>
 					</li>
 				</ul>

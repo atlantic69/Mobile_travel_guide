@@ -20,7 +20,7 @@
 	<div class = "block">
 		<div class="container p-5 ">
 			<div class="container p-5 ">
-				<div class="container rounded p-5 bg-primary" style="--bs-bg-opacity: .6;">
+				<div class="container rounded p-5 bg-primary" style="--bs-bg-opacity: .55;">
 					
 					<h2 class="text-center">Служба поддержки:</h2>
 					
