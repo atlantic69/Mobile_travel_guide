@@ -51,7 +51,14 @@
 						<li><a class="dropdown-item" href="#">Избранное</a></li>
 
 						<?php
-							if ($_COOKIE['user'] == "Moderator"):
+						//Проверка админки
+							$user_name = filter_var(trim($_COOKIE['user']), FILTER_SANITIZE_STRING);
+							$mysql = new mysqli('MP', 'mysql', '', 'mop');
+							$pull_admin = $mysql->query("SELECT `admin` FROM `reg_user` WHERE `name` = '$user_name'");
+							$admin = $pull_admin->fetch_assoc();
+							$mysql->close();
+
+							if ($admin['admin'] == 1):
 						?>
 						<li><a class="dropdown-item" href="add_dost.php">Добавление+</a></li>
 						<?php endif; ?>

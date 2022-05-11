@@ -7,11 +7,10 @@
 	
 	$mysql = new mysqli('MP', 'mysql', '', 'mop');
 	
-	$result = $mysql->query("SELECT * FROM `reg_user` 
+	$pull_name = $mysql->query("SELECT `name` FROM `reg_user`
 	WHERE `email` = '$email' AND `password` = '$password'");
-	
-	$user = $result->fetch_assoc();
-	
+	$user = $pull_name->fetch_assoc();
+
 	if(count($user) == 0)
 	{
 		echo"<script>alert('Такой пользователь не найден')</script>";

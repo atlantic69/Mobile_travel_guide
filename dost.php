@@ -25,29 +25,29 @@
 					
 					<h3 class="text-center mb-4">Предложить достопримечательность для добавления на карту</h3>
 					
-					<form class="needs-validation" novalidate>
+					<form action="check_dost.php" method="post" class="needs-validation" novalidate>
 						<div class="row g-2">
 
 							<div class="col-10 mx-auto position-relative">
-								<h6 for="title" class="form-label">Название объекта:</h6>
-								<input type="text" class="form-control" id="title" placeholder="Памятник лавочке" required>
+								<h6 class="form-label">Название объекта:</h6>
+								<input name="title" type="text" class="form-control" placeholder="Памятник лавочке" required>
 								<div class="invalid-tooltip">Пожалуйста, напишите название объекта.</div>
 							</div>
 
 							<div class="col-10 mx-auto position-relative">
-								<h6 for="address" class="form-label">Адрес:</h6>
-								<input type="text" class="form-control" id="address" placeholder="Тольятти, 42a" required>
+								<h6 class="form-label">Адрес:</h6>
+								<input name="address" type="text" class="form-control" placeholder="Тольятти, 42a" required>
 								<div class="invalid-tooltip">Пожалуйста, укажите адрес объекта.</div>
 							</div>
 
 							<div class="col-10 mx-auto">
-								<h6 for="coord" class="form-label">Координаты:<small class="text-muted">(Необязательное поле)</small></h6>
-								<input type="text" class="form-control" id="coord" placeholder="Введите в формате: 12.345678, 98.765432">
+								<h6 class="form-label">Координаты:<small class="text-muted">(Необязательное поле)</small></h6>
+								<input name="coord" type="text" class="form-control" placeholder="Введите в формате: 12.345678 98.765432">
 							</div>
 
 							<div class="col-sm-4 mx-auto position-relative">
-								<h6 for="country" class="form-label">Страна:</h6>
-								<select class="form-select" id="country" required>
+								<h6 class="form-label">Страна:</h6>
+								<select name="country" class="form-select" required>
 									<option value="">Выберите страну...</option>
 										<option>Россия</option>
 										<option>Казахстан</option>
@@ -58,8 +58,8 @@
 							</div>
 
 							<div class="col-sm-4 mx-auto position-relative">
-								<h6 for="state" class="form-label">Город:</h6>
-								<select class="form-select" id="state" required>
+								<h6 class="form-label">Город:</h6>
+								<select name="state" class="form-select" required>
 									<option value="">Выберите город...</option>
 										<option>Новокузнецк</option>
 										<option>Москва</option>
@@ -70,9 +70,9 @@
 							</div>
 			
 							<div class="col-10 mx-auto">
-								<h6 for="description" class="form-label">Расскажите об этом месте:</h6>
+								<h6 class="form-label">Расскажите об этом месте:</h6>
 								<div class="input-group">
-  									<textarea class="form-control position-relative" id="description" placeholder="Достопримечательность появилась..." required></textarea>
+  									<textarea name="description" class="form-control position-relative" placeholder="Достопримечательность появилась..." required></textarea>
   									<div class="invalid-tooltip">Пожалуйста, напишите пару слов об объекте.</div>
 								</div>
 							</div>
@@ -80,31 +80,31 @@
 							<div class="col-sm-4 mx-auto">
 								<h6 class="form-label">Как вы оцените это место?</h6>
 								<div class="form-check">
-									<input id="5" name="paymentMethod" type="radio" class="form-check-input" required>
-									<label class="form-check-label" for="5">Отлично</label>
+									<input id="5" name="rad_but" type="radio" class="form-check-input" required>
+									<label class="form-check-label">Отлично</label>
 								</div>
 								<div class="form-check">
-									<input id="4" name="paymentMethod" type="radio" class="form-check-input" required>
-									<label class="form-check-label" for="4">Хорошо</label>
+									<input id="4" name="rad_but" type="radio" class="form-check-input" required>
+									<label class="form-check-label">Хорошо</label>
 								</div>
 								<div class="form-check">
-									<input id="3" name="paymentMethod" type="radio" class="form-check-input" checked required>
-									<label class="form-check-label" for="3">Нормально</label>
+									<input id="3" name="rad_but" type="radio" class="form-check-input" checked required>
+									<label class="form-check-label">Нормально</label>
 								</div>
 								<div class="form-check">
-									<input id="2" name="paymentMethod" type="radio" class="form-check-input" required>
-									<label class="form-check-label" for="2">Плохо</label>
+									<input id="2" name="rad_but" type="radio" class="form-check-input" required>
+									<label class="form-check-label">Плохо</label>
 								</div>
 								<div class="form-check position-relative">
-									<input id="1" name="paymentMethod" type="radio" class="form-check-input" required=>
-									<label class="form-check-label" for="1">Ужасно</label>
+									<input id="1" name="rad_but" type="radio" class="form-check-input" required=>
+									<label class="form-check-label">Ужасно</label>
 								<div class="invalid-tooltip">Нам важно знать вашу оценку.</div>
 								</div>
 							</div>
 		  
 							<div class="col-sm-4 my-5 mx-auto">
-								<h6 for="photo" class="form-label">Есть фотографии? Загрузите!<small class="text-muted">(Необязательное поле)</small></h6>
-								<input class="form-control form-control-sm" id="photo" type="file">
+								<h6 class="form-label">Есть фотографии? Загрузите!<small class="text-muted">(Необязательное поле)</small></h6>
+								<input name="photo" class="form-control form-control-sm" type="file">
 							</div>
 							
 							<div class="col-10 mx-auto">
