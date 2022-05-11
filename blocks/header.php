@@ -1,10 +1,20 @@
 <!--Создать страницу для настроек и избранного-->
+<!--Пересмотреть код и сократить-->
+<!--Добавить переключение городов-->
+<?php require "css/meta_link.php" ?>
+
+<!--Скрипт для открывания выпадающего меню при нажатии на имя пользователя-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous">
+</script>
+
 <header class="p-3 bg-dark text-white">
 	<div class="container">
 		<div class="navbar navbar-expand-lg navbar-dark bg-dark">
 			
-			<a href="/index.php" class="d-flex align-items-center px-3">
-				<img src="/img/mop.png" alt="mop" width="40" height="40" class="rounded">
+			<a href="index.php" class="d-flex align-items-center px-3">
+				<img src="img/mop.png" alt="mop" width="40" height="40" class="rounded">
 			</a>
 			
 			<span class="fs-4"><a href="index.php">Мобильный путеводитель</a></span>
@@ -24,10 +34,10 @@
 						</a>
 				
 						<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-							<li><a class="dropdown-item" href="">Новокузнецк</a></li>
-							<li><a class="dropdown-item" href="">Москва</a></li>
-							<li><a class="dropdown-item" href="">Владивосток</a></li>
-							<li><a class="dropdown-item" href="">Калининград</a></li>
+							<li><a class="dropdown-item" href="#">Новокузнецк</a></li>
+							<li><a class="dropdown-item" href="#">Москва</a></li>
+							<li><a class="dropdown-item" href="#">Владивосток</a></li>
+							<li><a class="dropdown-item" href="#">Калининград</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -87,10 +97,4 @@
 </header>
 
 <?php require "reg.php" ?>
-
 <?php require "auth.php" ?>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
-		crossorigin="anonymous">
-</script>

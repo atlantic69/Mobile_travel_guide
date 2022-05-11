@@ -22,7 +22,7 @@
 						<label for="password">Пароль</label>
 						<div class="invalid-feedback">Пожалуйста, укажите действующий пароль.</div>
 					</div>
-					<a href="#"><small>Забыли пароль?</small></a>
+					<span><small>Забыли пароль?</small></span>
 					
 					<button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Войти</button>
 					<small class="text-muted">При входе вы подтверждаете согласие с условиями использования сервиса и политикой о данных пользователей.</small>

@@ -1,23 +1,12 @@
-<!--Вынести скрипт и теги с head`а в отдельные файлы-->
+<!--Вынести скрипт в отдельный файл-->
 <!doctype html>
 <html lang="ru">
 	<head>
-		
-		<meta charset = "utf-8">
-		<meta name = "viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		
-		<link rel = "stylesheet" href = "css/newstyle.css">
-		<link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
-		integrity = "sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin = "anonymous">
-		
+		<?php require "css/meta_link.php" ?>
 		<title>Достопримечательность+</title>
-	
 	</head>
 	<body>
-		
 	<?php require "blocks/header.php" ?>
-		
 	<div class = "block">
 		<div class="container px-5 p-4">
 			<div class="container px-5">
@@ -117,9 +106,7 @@
 			</div>
 		</div>
 	</div>
-	
 	<?php require "blocks/footer.php" ?>
-
 	</body>
 </html>
 
