@@ -69,24 +69,24 @@
 							<div class="col-sm-4 mx-auto">
 								<h6 class="form-label">Как вы оцените это место?</h6>
 								<div class="form-check">
-									<input id="5" name="rad_but" type="radio" class="form-check-input" required>
-									<label class="form-check-label">Отлично</label>
+									<input id="5" name="rad_but" value="Отлично" type="radio" class="form-check-input" required>
+									<label for="5" class="form-check-label">Отлично</label>
 								</div>
 								<div class="form-check">
-									<input id="4" name="rad_but" type="radio" class="form-check-input" required>
-									<label class="form-check-label">Хорошо</label>
+									<input id="4" name="rad_but" value="Хорошо" type="radio" class="form-check-input" required>
+									<label for="4" class="form-check-label">Хорошо</label>
 								</div>
 								<div class="form-check">
-									<input id="3" name="rad_but" type="radio" class="form-check-input" checked required>
-									<label class="form-check-label">Нормально</label>
+									<input id="3" name="rad_but" value="Нормально" type="radio" class="form-check-input" checked required>
+									<label for="3" class="form-check-label">Нормально</label>
 								</div>
 								<div class="form-check">
-									<input id="2" name="rad_but" type="radio" class="form-check-input" required>
-									<label class="form-check-label">Плохо</label>
+									<input id="2" name="rad_but" value="Плохо" type="radio" class="form-check-input" required>
+									<label for="2" class="form-check-label">Плохо</label>
 								</div>
 								<div class="form-check position-relative">
-									<input id="1" name="rad_but" type="radio" class="form-check-input" required=>
-									<label class="form-check-label">Ужасно</label>
+									<input id="1" name="rad_but" value="Ужасно" type="radio" class="form-check-input" required=>
+									<label for="1" class="form-check-label">Ужасно</label>
 								<div class="invalid-tooltip">Нам важно знать вашу оценку.</div>
 								</div>
 							</div>
