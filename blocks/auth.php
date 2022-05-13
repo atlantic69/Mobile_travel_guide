@@ -12,14 +12,14 @@
 				<form action="blocks/check_auth.php" class="needs-validation" method="post" novalidate>
 							
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control rounded-4" id="email" name="email" placeholder=" " required>
-						<label for="email">Электронная почта</label>
+						<input type="text" class="form-control rounded-4" name="email" placeholder=" " required>
+						<label>Электронная почта</label>
 						<div class="invalid-feedback">Пожалуйста, введите E-mail.</div>
 					</div>
 							
 					<div class="form-floating mb-3">
-						<input type="password" class="form-control rounded-4" id="password" name="password" placeholder=" " required>
-						<label for="password">Пароль</label>
+						<input type="password" class="form-control rounded-4" name="password" placeholder=" " required>
+						<label>Пароль</label>
 						<div class="invalid-feedback">Пожалуйста, укажите действующий пароль.</div>
 					</div>
 					<span><small>Забыли пароль?</small></span>

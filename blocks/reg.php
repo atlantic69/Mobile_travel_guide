@@ -12,20 +12,20 @@
 				<form action="blocks/check_reg.php" class="needs-validation" method="post" novalidate>
 					
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control rounded-4" id="name" name="name" placeholder=" " required>
-						<label for="name">Введите никнейм</label>
+						<input type="text" class="form-control rounded-4" name="name" placeholder=" " required>
+						<label>Введите никнейм</label>
 						<div class="invalid-feedback">Пожалуйста, введите никнейм.</div>
 					</div>
 								
 					<div class="form-floating mb-3">
-						<input type="email" class="form-control rounded-4" id="email" name="email" placeholder=" " required>
-						<label for="email">Укажите email</label>
+						<input type="email" class="form-control rounded-4" name="email" placeholder=" " required>
+						<label>Укажите email</label>
 						<div class="invalid-feedback">Пожалуйста, укажите E-mail.</div>
 					</div>
 							
 					<div class="form-floating mb-3">
-						<input type="password" class="form-control rounded-4" id="password" name="password" placeholder=" " required>
-						<label for="password">Придумайте пароль</label>
+						<input type="password" class="form-control rounded-4" name="password" placeholder=" " required>
+						<label>Придумайте пароль</label>
 						<div class="invalid-feedback">Пожалуйста, придумайте другой пароль.</div>
 					</div>
 								

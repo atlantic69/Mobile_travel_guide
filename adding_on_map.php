@@ -6,12 +6,13 @@
 	$country = filter_var(trim($_POST['country']), FILTER_SANITIZE_STRING);
 	$state = filter_var(trim($_POST['state']), FILTER_SANITIZE_STRING);
 	$address = filter_var(trim($_POST['address']), FILTER_SANITIZE_STRING);
-	$coorX = filter_var(trim($_POST['coorX']), FILTER_SANITIZE_STRING);
-	$coorY = filter_var(trim($_POST['coorY']), FILTER_SANITIZE_STRING);
+	$coord = filter_var(trim($_POST['coord']), FILTER_SANITIZE_STRING);
 	$description = filter_var(trim($_POST['description']), FILTER_SANITIZE_STRING);
 	$rating = filter_var(trim($_POST['rating']), FILTER_SANITIZE_STRING);
 	$photo = filter_var(trim($_POST['photo']), FILTER_SANITIZE_STRING);
 	$added_on_map = 1;
+
+	if ($photo == "") $photo = "no_foto.webp";
 
 	$mysql = new mysqli('MP', 'mysql', '', 'mop');
 	
@@ -21,8 +22,7 @@
 	`country` = '$country',
 	`state` = '$state',
 	`address` = '$address',
-	`coorX` = '$coorX',
-	`coorY` = '$coorY',
+	`coord` = '$coord',
 	`description` = '$description',
 	`rating` = '$rating',
 	`photo` = '$photo',
@@ -30,6 +30,8 @@
 	WHERE `id` = '$id_dost'");
 	
 	$mysql->close();
-	
+
+	require "scripts/filling_data.php";
+
 	header('Location: add_dost.php');
 ?>

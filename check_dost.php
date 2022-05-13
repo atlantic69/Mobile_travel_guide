@@ -10,11 +10,13 @@
 	$rating = filter_var(trim($_POST['rad_but']), FILTER_SANITIZE_STRING);
 	$photo = filter_var(trim($_POST['photo']), FILTER_SANITIZE_STRING);
 
-	list($coorX, $coorY) = explode(" ", $coord);
+	if ($photo == "") $photo = "no_foto.webp";
+
+	//list($coorX, $coorY) = explode(" ", $coord);
 
 	$mysql = new mysqli('MP', 'mysql', '', 'mop');
-	$mysql->query("INSERT INTO `dost` (`title`, `address`, `coorX`, `coorY`, `country`, `state`, `description`, `author`, `rating`, `photo`)
-	VALUES ('$title', '$address', '$coorX',  '$coorY', '$country', '$state', '$description', '$author', '$rating', '$photo')");
+	$mysql->query("INSERT INTO `dost` (`title`, `address`, `coord`, `country`, `state`, `description`, `author`, `rating`, `photo`)
+	VALUES ('$title', '$address', '$coord', '$country', '$state', '$description', '$author', '$rating', '$photo')");
 	$mysql->close();
 	
 	//echo "Данные успешно отправлены в базу данных";

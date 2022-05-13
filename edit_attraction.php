@@ -10,8 +10,7 @@
 	$country = $attraction['country'];
 	$state = $attraction['state'];
 	$address = $attraction['address'];
-	$coorX = $attraction['coorX'];
-	$coorY = $attraction['coorY'];
+	$coord = $attraction['coord'];
 	$description = $attraction['description'];
 	$rating = $attraction['rating'];
 	$photo = $attraction['photo'];
