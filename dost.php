@@ -1,4 +1,4 @@
-<!--Вынести скрипт в отдельный файл-->
+<!--Пользовательская страница для предложений добавить объект на карту-->
 <!doctype html>
 <html lang="ru">
 	<head>
@@ -11,18 +11,14 @@
 		<div class="container px-5 p-4">
 			<div class="container px-5">
 				<div class="container p-4 rounded-3 bg-primary shadow" style="--bs-bg-opacity: .55;">
-					
 					<h3 class="text-center mb-4">Предложить достопримечательность для добавления на карту</h3>
-					
 					<form action="check_dost.php" method="post" class="needs-validation" novalidate>
 						<div class="row g-2">
-
 							<div class="col-11 mx-auto position-relative">
 								<h6 class="form-label">Название объекта:</h6>
 								<input name="title" type="text" class="form-control" placeholder="Памятник лавочке" required>
 								<div class="invalid-tooltip">Пожалуйста, напишите название объекта.</div>
 							</div>
-
 							<div class="col-sm-5 mx-auto position-relative">
 								<h6 class="form-label">Страна:</h6>
 								<select name="country" class="form-select" required>
@@ -34,7 +30,6 @@
 								</select>
 								<div class="invalid-tooltip">Пожалуйста, выберите страну.</div>
 							</div>
-
 							<div class="col-sm-5 mx-auto position-relative">
 								<h6 class="form-label">Город:</h6>
 								<select name="state" class="form-select" required>
@@ -46,18 +41,15 @@
 								</select>
 								<div class="invalid-tooltip">Пожалуйста, выберите город.</div>
 							</div>
-
 							<div class="col-sm-5 mx-auto position-relative">
 								<h6 class="form-label">Адрес:</h6>
 								<input name="address" type="text" class="form-control" placeholder="Тольятти, 42a" required>
 								<div class="invalid-tooltip">Пожалуйста, укажите адрес объекта.</div>
 							</div>
-
 							<div class="col-sm-5 mx-auto">
 								<h6 class="form-label">Координаты:<small class="text-muted">(Необязательное поле)</small></h6>
 								<input name="coord" type="text" class="form-control" placeholder="Введите в формате: 12.345678, 98.765432">
 							</div>
-
 							<div class="col-11 mx-auto">
 								<h6 class="form-label">Расскажите об этом месте:</h6>
 								<div class="input-group">
@@ -65,7 +57,6 @@
   									<div class="invalid-tooltip">Пожалуйста, напишите пару слов об объекте.</div>
 								</div>
 							</div>
-
 							<div class="col-sm-5 mx-auto">
 								<h6 class="form-label">Как вы оцените это место?</h6>
 								<div class="form-check">
@@ -90,18 +81,15 @@
 								<div class="invalid-tooltip">Нам важно знать вашу оценку.</div>
 								</div>
 							</div>
-		  
 							<div class="col-sm-5 pt-4 mx-auto">
 								<h6 class="form-label">Есть фотографии? Загрузите!
 									<br><small class="text-muted">(Необязательное поле)</small>
 								</h6>
 								<input name="photo" class="form-control" type="file">
 							</div>
-							
 							<div class="col-11 mx-auto">
 								<button class="btn btn-lg btn-dark w-100" type="submit">Предложить объект</button>
 							</div>
-
 						</div>
 					</form>
 				</div>
@@ -112,19 +100,5 @@
 	</body>
 </html>
 
-<script type="text/javascript">
-	(function () {
-		'use strict'
-		var forms = document.querySelectorAll('.needs-validation')
-		Array.prototype.slice.call(forms)
- 	 	.forEach(function (form) {
- 	   	form.addEventListener('submit', function (event) {
- 	   	  	if (!form.checkValidity()) {
- 	       		event.preventDefault()
- 	       		event.stopPropagation()
- 	     		}
- 	     	form.classList.add('was-validated')
- 	  		}, false)
- 		})
-	})()
-</script>
+<!-- Проверка заполнения полей -->
+<script src="../scripts/check_forms.js" type="text/javascript"></script>

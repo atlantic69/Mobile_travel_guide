@@ -1,4 +1,4 @@
-<!---->
+<!--Получение полей строки достопримечательности, которую предложил пользователь-->
 <?php
 	$mysql = new mysqli('MP', 'mysql', '', 'mop');
 	$pull_attraction = $mysql->query("SELECT * FROM `dost` WHERE `added_on_map` IS NULL LIMIT 1");

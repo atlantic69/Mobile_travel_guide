@@ -1,4 +1,4 @@
-<!--Разобраться с переадресацией на главную страницу после срабатывания алерта-->
+<!--Отправка в БД строки с новой предложенной пользователем достопримечательностью-->
 <?php
 	$title = filter_var(trim($_POST['title']), FILTER_SANITIZE_STRING);
 	$address = filter_var(trim($_POST['address']), FILTER_SANITIZE_STRING);
@@ -12,13 +12,11 @@
 
 	if ($photo == "") $photo = "no_foto.webp";
 
-	//list($coorX, $coorY) = explode(" ", $coord);
-
 	$mysql = new mysqli('MP', 'mysql', '', 'mop');
-	$mysql->query("INSERT INTO `dost` (`title`, `address`, `coord`, `country`, `state`, `description`, `author`, `rating`, `photo`)
-	VALUES ('$title', '$address', '$coord', '$country', '$state', '$description', '$author', '$rating', '$photo')");
+	$mysql->query("INSERT INTO `dost` (`title`, `address`, `coord`,
+		`country`, `state`, `description`, `author`, `rating`, `photo`)
+	VALUES ('$title', '$address', '$coord', '$country', '$state',
+		'$description', '$author', '$rating', '$photo')");
 	$mysql->close();
-	
-	//echo "Данные успешно отправлены в базу данных";
 	header('Location: /');
 ?>

@@ -1,4 +1,4 @@
-<!--Заполнить value значениями с БД-->
+<!--Форма предложенных достопримечательностей, доступна только модераторам-->
 <!doctype html>
 <html lang="ru">
 	<head>
@@ -8,16 +8,12 @@
 	<body>
 	<?php require "blocks/header.php" ?>
 	<div class = "block">
-
-		<?php require "edit_attraction.php"	?>
-
+		<?php require "edit_attraction.php"	?> <!--Подключение полей предложенного объекта-->
 		<div class="container px-5 p-4">
 		<div class="container px-5">
 			<div class="container p-4 rounded-3 bg-dark text-white shadow" style="--bs-bg-opacity: .8;">
-
    			<h3 class="text-center mb-4">Предложенные достопримечательности</h3>
-
-   			<form class="">
+   			<form>
 					<div class="row g-2">
 						<div class="col-sm-1 mx-auto">
 							<h6 class="form-label">№:</h6>
@@ -67,7 +63,6 @@
 						</div>
 					</div>
 				</form>
-
    		</div>
    	</div>
 		</div>

@@ -1,4 +1,4 @@
-<!--Разобраться с переадресацией на главную страницу после срабатывания алерта-->
+<!--Обновление полей в строке предложенной достопримечательности-->
 <?php
 	$id_dost = filter_var(trim($_POST['id_dost']), FILTER_SANITIZE_STRING);
 	$title = filter_var(trim($_POST['title']), FILTER_SANITIZE_STRING);
@@ -15,7 +15,6 @@
 	if ($photo == "") $photo = "no_foto.webp";
 
 	$mysql = new mysqli('MP', 'mysql', '', 'mop');
-	
 	$mysql->query("UPDATE `dost` SET
 	`title` = '$title',
 	`author` = '$author',
@@ -28,10 +27,8 @@
 	`photo` = '$photo',
 	`added_on_map` = '$added_on_map'
 	WHERE `id` = '$id_dost'");
-	
 	$mysql->close();
 
-	require "scripts/filling_data.php";
-
+	require "scripts/filling_data.php";//запуск скрипта по формированию json-файла
 	header('Location: add_dost.php');
 ?>

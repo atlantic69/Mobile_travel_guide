@@ -8,11 +8,11 @@
 	<body>
 		<?php require "blocks/header.php" ?>
 		<div class = "block">
-			<div class="container p-5 ">
-				<div class="container p-5 ">
-					<div class="container rounded p-5 bg-primary" style="--bs-bg-opacity: .55;">
+			<div class="container p-5">
+				<div class="container p-5">
+					<div class="container rounded p-4 px-5 bg-primary shadow" style="--bs-bg-opacity: .55;">
 					
-						<h2 class="text-center">О чём проект?</h2>
+						<h2 class="text-center mb-4">О чём проект?</h2>
 					
 						<p>Идеей послужила мысль о том, что лучше всего город знают только местные жители, 
 						поэтому стоит передать штурвал в руки настоящим экспертам города, 

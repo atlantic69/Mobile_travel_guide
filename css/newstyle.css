@@ -5,8 +5,8 @@ html, body, #map {
 .block {
 	width: 100%;
 	margin: 0% auto;
-	height: 755px;
-	background: url(/img/bg1.png) #ccc;
+	height: 776px;
+	background: url(/img/bg.png) #ccc;
 }
 
 a {

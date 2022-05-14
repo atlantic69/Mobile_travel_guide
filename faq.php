@@ -1,3 +1,5 @@
+<!--Раздел с ответами на частые вопросы.
+	Можно было бы сформировать шаблон для вопросов и выводить их на основе json-файла с вопросами и ответами-->
 <!doctype html>
 <html lang="ru">
 	<head>
@@ -7,12 +9,10 @@
 	<body>
 		<?php require "blocks/header.php" ?>
 		<div class = "block">
-			<div class="container p-5 ">
-				<div class="container p-5 ">
-					<div class="container rounded p-5 bg-primary" style="--bs-bg-opacity: .55;">
-					
-						<h2 class="text-center">Раздел часто задаваемых вопросов:</h2>
-					
+			<div class="container p-5">
+				<div class="container p-5">
+					<div class="container p-4 px-5 rounded bg-primary shadow" style="--bs-bg-opacity: .55;">
+						<h2 class="text-center mb-4">Раздел часто задаваемых вопросов:</h2>
 						<div class="accordion" id="accordionExample">
 							<div class="accordion-item rounded mb-3">
 								<h2 class="accordion-header" id="headingOne">
@@ -26,7 +26,6 @@
 									</div>
 								</div>
 							</div>
-						
 							<div class="accordion-item rounded mb-3">
 								<h2 class="accordion-header" id="headingTwo">
 									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -39,20 +38,6 @@
 									</div>
 								</div>
 							</div>
-						
-							<div class="accordion-item rounded mb-3">
-								<h2 class="accordion-header" id="headingThree">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-										Как сменить почту в аккаунте?
-									</button>
-								</h2>
-								<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-									<div class="accordion-body">
-										<strong>Ответ: </strong>
-									</div>
-								</div>
-							</div>
-						
 							<div class="accordion-item rounded mb-3">
 								<h2 class="accordion-header" id="headingFour">
 									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -65,7 +50,6 @@
 									</div>
 								</div>
 							</div>
-						
 							<div class="accordion-item rounded mb-3">
 								<h2 class="accordion-header" id="headingFive">
 									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -79,7 +63,6 @@
 								</div>
 							</div>
 						</div>
-				
 					</div>
 				</div>
 			</div>
