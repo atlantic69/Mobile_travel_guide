@@ -51,7 +51,7 @@
 								<input name="coord" type="text" class="form-control" placeholder="Введите в формате: 12.345678, 98.765432">
 							</div>
 							<div class="col-11 mx-auto">
-								<h6 class="form-label">Расскажите об этом месте:</h6>
+								<h6 class="form-label">Расскажите об этом месте:<small class="text-muted">(Необязательное поле)</small></h6>
 								<div class="input-group">
   									<textarea name="description" class="form-control position-relative" placeholder="Достопримечательность появилась..." required></textarea>
   									<div class="invalid-tooltip">Пожалуйста, напишите пару слов об объекте.</div>

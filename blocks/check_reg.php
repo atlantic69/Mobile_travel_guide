@@ -14,11 +14,11 @@
 	
 	if(mb_strlen($name) < 2 || mb_strlen($name) > 49) 
 	{ 
-		ses_fm("Недопустимая длина имени, укажите более двух символов");
+		ses_fm("Никнейм должен содержать от 2 до 50 символов");
 	}
 	else if(mb_strlen($email) < 6 || mb_strlen($email) > 49) 
 	{ 
-		ses_fm("Недопустимая длина Email, укажите более шести символов");
+		ses_fm("Email должен содержать от 6 до 50 символов");
 	}
 	else if(mb_strlen($password) < 6 || mb_strlen($password) > 16)
 	{ 
